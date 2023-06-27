@@ -1,5 +1,42 @@
 # sam-app
 
+First build by:
+
+```
+sam build
+```
+
+```
+sam local invoke HelloWorldFunction
+sam local invoke HelloWorldFunction -e events/event.json
+```
+
+Which should result in:
+
+```
+START RequestId: 99d9426f-96ad-4193-8e59-bc22888a6e25 Version: $LATEST
+END RequestId: 99d9426f-96ad-4193-8e59-bc22888a6e25
+REPORT RequestId: 99d9426f-96ad-4193-8e59-bc22888a6e25  Init Duration: 0.12 ms  Duration: 260.42 ms     Billed Duration: 261 ms Memory Size: 128 MB       Max Memory Used: 128 MB
+{"statusCode": 200, "body": "{\"message\": \"Good morning Travis Media\"}"}
+
+```
+
+
+When you are sastified with the results, you run:
+
+```
+sam deploy
+```
+
+
+But if is your first time run:
+
+```
+sam deploy --guided
+```
+
+> The later one to mount it with that event as input.
+
 This project contains source code and supporting files for a serverless application that you can deploy with the SAM CLI. It includes the following files and folders.
 
 - hello_world - Code for the application's Lambda function.
